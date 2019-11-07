@@ -34,40 +34,40 @@ class ViewController: UIViewController {
     }
     
     @IBAction func randomColorButtons(_ sender: UIButton) {
-            switch sender.tag {
-            case 0:
-                if colorGenerated.highestBGR() == colorGenerated.green {
-                    currentScoreGenerator()
-                    guessThatColor.text = "You Win"
-                    currentScore.text = "The current score is \(score)"
-                     randomColorImage.backgroundColor = colorGenerated.bgrColor()
-                } else {
-                    guessThatColor.text = "You Lose"
-                    [redOutlet, blueOutlet, greenOutlet].forEach({$0?.isEnabled = false})
-                }
-                
-            case 1:   if colorGenerated.highestBGR() == colorGenerated.blue {
-                          currentScoreGenerator()
-                          guessThatColor.text = "You Win"
-                          currentScore.text = "The current score is \(score)"
-                           randomColorImage.backgroundColor = colorGenerated.brgColor()
-                      } else {
-                          guessThatColor.text = "You Lose"
-                          [redOutlet, blueOutlet, greenOutlet].forEach({$0?.isEnabled = false})
-                      }
-            case 2:   if colorGenerated.highestBRG() == colorGenerated.red {
-                          currentScoreGenerator()
-                          guessThatColor.text = "You Win"
-                          currentScore.text = "The current score is \(score)"
-                           randomColorImage.backgroundColor = colorGenerated.brgColor()
-                      } else {
-                          guessThatColor.text = "You Lose"
-                          [redOutlet, blueOutlet, greenOutlet].forEach({$0?.isEnabled = false})
-                      }
-            default:
-                print("This is Not Located")
-            }
-        }
+//            switch sender.tag {
+//            case 0:
+//                if colorGenerated.highestBGR() == colorGenerated.green {
+//                    currentScoreGenerator()
+//                    guessThatColor.text = "You Win"
+//                    currentScore.text = "The current score is \(score)"
+//                     randomColorImage.backgroundColor = colorGenerated.bgrColor()
+//                } else {
+//                    guessThatColor.text = "You Lose"
+//                    [redOutlet, blueOutlet, greenOutlet].forEach({$0?.isEnabled = false})
+//                }
+//
+//            case 1:   if colorGenerated.highestBGR() == colorGenerated.blue {
+//                          currentScoreGenerator()
+//                          guessThatColor.text = "You Win"
+//                          currentScore.text = "The current score is \(score)"
+//                           randomColorImage.backgroundColor = colorGenerated.brgColor()
+//                      } else {
+//                          guessThatColor.text = "You Lose"
+//                          [redOutlet, blueOutlet, greenOutlet].forEach({$0?.isEnabled = false})
+//                      }
+//            case 2:   if colorGenerated.highestBRG() == colorGenerated.red {
+//                          currentScoreGenerator()
+//                          guessThatColor.text = "You Win"
+//                          currentScore.text = "The current score is \(score)"
+//                           randomColorImage.backgroundColor = colorGenerated.brgColor()
+//                      } else {
+//                          guessThatColor.text = "You Lose"
+//                          [redOutlet, blueOutlet, greenOutlet].forEach({$0?.isEnabled = false})
+//                      }
+//            default:
+//                print("This is Not Located")
+//            }
+//        }
         override func viewDidLoad() {
             super.viewDidLoad()
             redOutlet.backgroundColor = .red
